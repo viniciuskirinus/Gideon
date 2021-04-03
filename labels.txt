@@ -1,4 +1,4 @@
-open\None
 time\getTime
+open\notepad
 time\getDate
 weather\getWeather
