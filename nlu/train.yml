@@ -8,6 +8,10 @@ commands:
     input: Me diga a hora
     entity: time
     action: getTime
+  - commmand:
+    input: Eu quero saber as horas
+    entity: time
+    action: getTime
   # Data
   - commmand:
     input: Que dia é hoje?

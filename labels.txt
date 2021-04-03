@@ -1,0 +1,4 @@
+open\None
+time\getTime
+time\getDate
+weather\getWeather

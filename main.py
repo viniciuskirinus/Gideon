@@ -6,6 +6,7 @@ import pyaudio
 import pyttsx3
 import json
 import core
+from nlu.classifier import classify
 
 # Síntese de fala
 engine = pyttsx3.init()
@@ -42,6 +43,11 @@ while True:
 
             print(text)
 
+            entity = classify(text)
 
-            if text == 'que horas são' or text == 'me diga as horas':
+        # Reconhecer entidade de texto.
+
+            if entity == 'time\\getTime':
                 speak(core.SystemInfo.get_time())
+
+            print('Text: {} Entity: {}'.format(text, entity))
