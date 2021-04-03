@@ -30,7 +30,9 @@ def evaluate(text):
     elif entity == 'open|notepad':
         speak('Abrindo o bloco de notas')
         os.system('notepad.exe')
-
+    elif entity == 'open|opera':
+        speak('Abrindo o Opera')
+        os.system('"C:/Users/vinic/AppData/Local/Programs/Opera GX/launcher.exe"')
 
     print('Text: {} Entity: {}'.format(text, entity))
 

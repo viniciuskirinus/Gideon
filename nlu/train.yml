@@ -39,3 +39,7 @@ commands:
     input: Abra o bloco de notas.
     entity: open
     action: notepad
+  - commmand:
+    input: Abra o opera.
+    entity: open
+    action: opera

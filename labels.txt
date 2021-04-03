@@ -1,4 +1,5 @@
-weather|getWeather
 time|getDate
-time|getTime
 open|notepad
+open|opera
+weather|getWeather
+time|getTime
