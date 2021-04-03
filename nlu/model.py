@@ -26,7 +26,7 @@ print('Maior seq:', max_seq)
 # Input Data one-hot encoding
 input_data = np.zeros((len(inputs), max_seq, 256), dtype='float32')
 for i, inp in enumerate(inputs):
-    for k, ch in enumerate(bytes(inp.encode('utf-8')):
+    for k, ch in enumerate(bytes(inp.encode('utf-8'))):
         input_data[i, k, int(ch)] = 1.0
 
 # Input Data sparse
@@ -65,7 +65,28 @@ model.add(Dense(len(output_data), activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc'])
 
 
-model.fit(input_data, output_data, epochs=16)
+model.fit(input_data, output_data, epochs=128)
+
+# Classificar texto em uma entidade
+
+def classify(text):
+    # Criar um array de entrada
+    x = np.zeros((1, 48, 256), dtype='float32')
+
+    # Preencher o array com dados de texto.
+
+    for k, ch in enumerate(bytes(text.encode('utf-8'))):
+        x[0, k, int(ch)] = 1.0
+
+    # Fazer previsão
+    out = model.predict(x)
+    idx = out.argmax()
+    print(idx2label[idx])
+
+while True:
+    text = input('Digite algo:')
+    classify(text)
+
 '''
 print(inputs)
 print(outputs)
