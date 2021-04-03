@@ -25,7 +25,7 @@ stream.start_stream()
 
 
 while True:
-    data = stream.read(2000)
+    data = stream.read(8192, exception_on_overflow=False)
     if len(data) == 0:
         break
     if rec.AcceptWaveform(data):
