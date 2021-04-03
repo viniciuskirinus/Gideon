@@ -9,3 +9,5 @@ Técnologias:
     Reconhecimento de voz: (Google para reconhecimento online, vosk para reconhecimento offline)
     Síntese de voz: (Pyttsx3)
     Algum tipo de IA: (Commands, NLU(classificação de texto))
+
+Funções do Assistente: Abrir programas.

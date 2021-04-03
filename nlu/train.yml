@@ -32,6 +32,10 @@ commands:
     action: getWeather
   # Open
   - commmand:
-    input: Abrir Opera.
+    input: Abrir bloco de notas.
     entity: open
-    action: opera
+    action: notepad
+  - commmand:
+    input: Abra o bloco de notas.
+    entity: open
+    action: notepad
